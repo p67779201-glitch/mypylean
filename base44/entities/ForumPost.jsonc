@@ -1,0 +1,54 @@
+{
+  "name": "ForumPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string",
+      "enum": [
+        "basics",
+        "loops",
+        "functions",
+        "debugging",
+        "projects"
+      ],
+      "enumColors": [
+        "green",
+        "blue",
+        "purple",
+        "yellow",
+        "pink"
+      ],
+      "default": "basics"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "replies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "at": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "body"
+  ]
+}
